@@ -1,18 +1,9 @@
-#1 = imposto igual a 35%, 35/100
-#2 = imposto igual a 25%, 25/100
-#3 = imposto igual a 15%, 15/100
-#4 = imposto igual a 5%,  5/100
-#5 = impsoto igual a 0%, 0/0
-
 for n in range(4):
     CodigoEstado = int(input("Digite o código do estado de origem da carga: "))
     PesoCargaToneladas = int(input("Peso da carga do caminhão em toneladas: "))
 
     PesoCargaQuilos = PesoCargaToneladas * 1000
     #Aqui já converteu o peso de toneladas em quilos
-
-    print("Peso da carga em kg: ", PesoCargaQuilos)
-    #Mostrar o peso da carga convertida em quilos
 
     CodigoCarga = int(input("Digite o código da carga entre 10 e 40: "))
     
@@ -31,12 +22,9 @@ for n in range(4):
     # <-- Outra condição para calcular o imposto -->
     def impostoEtotal(imp):
         Imposto = PrecoKg * imp
-
         Total = (PrecoKg + Imposto)
 
-        print("Peso da carga em Kg: " + str(PrecoKg))
-        print("Imposto: R$"+ str(Imposto))
-        print("Preço da carga Total: R$"+ str(Total))
+        print("Peso da carga em Kg: ", (PesoCargaQuilos), "\nPreço da carga do caminhão: R$", PrecoKg, "\nImposto: R$", Imposto, "\nPreço carga total: ", Total)
 
     if CodigoEstado == 1:
         impostoEtotal(0.35)
