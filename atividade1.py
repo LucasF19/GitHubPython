@@ -23,26 +23,32 @@ for n in range(4):
     else:#Se não for nenhuma das condições anteriores, então o código será invalidado
         print("Código invalido!")
 
-    # <-- Função para calcular o imposto, o total e exibir o resultado total -->
-    def impostoEtotal(imp):
-        Imposto = PrecoKg * imp
-        Total = (PrecoKg + Imposto)
-
-        print("Peso da carga em Kg: ", (PesoCargaQuilos), "\nPreço da carga do caminhão: R$", PrecoKg, "\nImposto: R$", Imposto, "\nPreço carga total: ", Total)
-
     # <-- Condição para verificar o "CodigoEstado" da carga -->
     if CodigoEstado == 1: #Se "CodigoEstado" for igual a 1, faça:
-        impostoEtotal(0.35)
+        imposto = 0.35
+        calc = PrecoKg * imposto
+
     elif CodigoEstado == 2: #Se "CodigoEstado" for igual a 2, faça:
-        impostoEtotal(0.25)
+        imposto = 0.25
+        calc = PrecoKg * imposto
+
     elif CodigoEstado == 3: #Se "CodigoEstado" for igual a 3, faça:
-        impostoEtotal(0.15)
+        imposto = 0.15
+        calc = PrecoKg * imposto
+
     elif CodigoEstado == 4: #Se "CodigoEstado" for igual a 4, faça:
-        impostoEtotal(0.05)
+        imposto = 0.5
+        calc = PrecoKg * imposto
+
     elif CodigoEstado == 5: #Se "CodigoEstado" for igual a 5, faça:
-        impostoEtotal(0.0)
+        calc = PrecoKg * imposto
+
     else: #Caso o "CodigoEstado" não for nenhuma das anteriores ele será invalidado
         print("Código de estado inválido")
+
+    total = PrecoKg + calc
+
+    print("Peso da carga em Kg: ", (PesoCargaQuilos), "\nPreço da carga do caminhão: R$", PrecoKg,"\nPreço carga total: R$", total)
 
     
 
