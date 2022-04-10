@@ -28,7 +28,7 @@ for n in range(4):
         Imposto = PrecoKg * imp
         Total = (PrecoKg + Imposto)
 
-        print("Peso da carga em Kg: ", (PesoCargaQuilos), "\nPreço da carga do caminhão: R$", PrecoKg, "\nImposto: R$", Imposto, "\nPreço carga total: ", Total)
+        print(f'Peso da carga em Kg:{PesoCargaQuilos} \nPreço da carga do caminhão: R${PrecoKg} \nImposto: R${Imposto} \nPreço carga total{Total}')
 
     # <-- Condição para verificar o "CodigoEstado" da carga -->
     if CodigoEstado == 1: #Se "CodigoEstado" for igual a 1, faça:
