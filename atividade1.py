@@ -7,21 +7,20 @@ for n in range(4):
 
     #Aqui já converteu o peso de toneladas em quilos:
     PesoCargaQuilos = PesoCargaToneladas * 1000
-    
+
     #Solicita o código da carga:
     CodigoCarga = int(input("Digite o código da carga entre 10 e 40: "))
     
-    #<-- Aqui vai começar as condições dependendo do codigo da carga -->
+    # <-- Função para calcular o preço por quilo -->
     def Carga(n2):
         PrecoKg = PesoCargaQuilos * n2
         return PrecoKg
 
+    # <-- Condições que dependem do código da carga -->
     if(CodigoCarga >= 10 and CodigoCarga <= 20): #Se "CodigoCarga" inserido for entre 10 e 20, faça:
         cod = Carga(100)
-
     elif(CodigoCarga >= 21 and CodigoCarga <= 30):#Se "CódigoCarga" inserido for entre 21 e 30, faca:
         cod = Carga(250)
-
     elif(CodigoCarga >= 31 and CodigoCarga <= 40):#Se "CodigoCarga" inserido for entre 31 e 40, faça:
         cod = Carga(340)
     else: #Se não for nenhuma das condições anteriores, então o código será invalidado
@@ -32,7 +31,7 @@ for n in range(4):
         Imposto = cod * imp
         return Imposto
 
-    # <-- Condição para verificar o "CodigoEstado" da carga -->
+    # <-- Condiçôes que dependem do código do estado -->
     if CodigoEstado == 1: #Se "CodigoEstado" for igual a 1, faça:
         Imp = imposto(0.35)
     elif CodigoEstado == 2: #Se "CodigoEstado" for igual a 2, faça:
@@ -46,8 +45,10 @@ for n in range(4):
     else: #Caso o "CodigoEstado" não for nenhuma das anteriores ele será invalidado
         print("Código de estado inválido")
 
+    #Calcula o total
     Total = cod + Imp
-    
+
+    #Exibe as informações coletadas
     print(f'Peso da carga em Kg:{PesoCargaQuilos} \nPreço da carga do caminhão: R${cod} \nImposto: R${Imp} \nPreço carga total: R${Total}')
 
     
