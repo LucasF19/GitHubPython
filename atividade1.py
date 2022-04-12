@@ -7,6 +7,7 @@ for n in range(4):
 
     #Aqui já converteu o peso de toneladas em quilos:
     PesoCargaQuilos = PesoCargaToneladas * 1000
+    
     #Solicita o código da carga:
     CodigoCarga = int(input("Digite o código da carga entre 10 e 40: "))
     
