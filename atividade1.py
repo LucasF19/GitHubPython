@@ -1,8 +1,9 @@
-for n in range(4):
-    #Solicita o código do estado da carga
+QuantCaminhao = 4
+for n in range(QuantCaminhao):
+    #Pede o código do estado da carga
     CodigoEstado = int(input("Digite o código do estado da carga: "))
 
-    #Solicita o peso da carga em toneladas:
+    #Pede o peso da carga em toneladas:
     PesoCargaToneladas = int(input("Peso da carga do caminhão em toneladas: "))
 
     #Aqui já converteu o peso de toneladas em quilos:
